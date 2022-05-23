@@ -278,7 +278,7 @@ tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
 
-if "@SinonRobot" not in PM_START_TEXT:
+if "@YatoNetwork" not in PM_START_TEXT:
     LOGGER.critical(f"Add `Powered By :- @YatoNetwork` In PM_START_TEXT To Fix This")
     sys.exit(1)
 else:
