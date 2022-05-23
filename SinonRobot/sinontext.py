@@ -5,7 +5,7 @@ I Am An Anime Themed Advance Group Management Bot With Lots Of Speciality.*
 *➖➖➖➖➖➖➖➖➖➖➖➖➖
 ◈ Try The Help Buttons Below To Know My Abilities ♡*
 
-*Powered By :- @YatoNetwork*
+Powered By :- @YatoNetwork
 """
 
 SINON_IMG = (
