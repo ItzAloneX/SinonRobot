@@ -40,6 +40,7 @@ jikanpy
 
 coffeehouse==2.2.4
 regex
+pythonping
 bleach
 git+https://github.com/python-telegram-bot/ptbcontrib.git
 wikipedia
@@ -70,7 +71,7 @@ youtube-search-python
 asyncio
 dateparser==1.0.0
 pymongo==3.12.1
-dnspython
+dnspython==2.1.0
 secureme
 apscheduler
 emoji-country-flag
@@ -88,7 +89,7 @@ better_profanity
 nudepy
 motor
 cloudscraper
-python-arq
+python-arq==6.0.3
 pytube
 tldextract
 cloudmersive_virus_api_client
@@ -121,5 +122,7 @@ requests
 six==1.16.0
 soupsieve==2.2.1
 SpeechRecognition==3.8.1
+python-dotenv==0.20.0
 urllib3==1.26.7
+python-rapidjson==1.5
 wikipedia==1.4.0
