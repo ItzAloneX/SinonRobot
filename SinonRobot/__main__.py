@@ -719,6 +719,8 @@ def main():
         settings_button, pattern=r"stngs_")
 
     about_callback_handler = CallbackQueryHandler(sinon_callback_data, pattern=r"sinon_")
+    basichelp_callback_handler = CallbackQueryHandler(sinon_callback_data, pattern=r"sinon_basichelp")
+    source_callback_handler = CallbackQueryHandler(sinon_callback_data, pattern=r"sinon_source")
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate,
                                      migrate_chats)
@@ -729,6 +731,8 @@ def main():
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(about_callback_handler)
+    dispatcher.add_handler(basichelp_callback_handler)
+    dispatcher.add_handler(source_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
     dispatcher.add_handler(donate_handler)
