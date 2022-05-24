@@ -65,7 +65,7 @@ buttons = [
                              text="🔐 Help",
                              callback_data="help_back"),
                         InlineKeyboardButton(
-                             text=" 💫 About Me",
+                             text="💫 About Me",
                              callback_data="sinon_"),
                     ], 
     ]
@@ -211,10 +211,10 @@ def start(update: Update, context: CallbackContext):
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="🚑 Support",
+                             text="🗯️ Support",
                              url=f"https://t.me/SinonSupport"),
                        InlineKeyboardButton(
-                             text="🛰️ Updates",
+                             text="🔔 Updates",
                              url="https://t.me/SinonUpdates")
                      ] 
                 ]
@@ -327,12 +327,12 @@ def sinon_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="💻 My Master", url="t.me/ItzAloneX"),
+                    InlineKeyboardButton(text="👷🏻‍♂️ Basic Help", callback_data="sinon_basichelp"),
                     InlineKeyboardButton(text="💫 Try Inline", switch_inline_query_current_chat="",),
                  ],
                  [
-                    InlineKeyboardButton(text="🔔 Updates", url="t.me/SinonUpdates"),
-                    InlineKeyboardButton(text="🗯️ Support", url="t.me/SinonSupport"),
+                    InlineKeyboardButton(text="💻 System Stats ", callback_data="stats_callback"),
+                    InlineKeyboardButton(text="💾 Source", callback_data="sinon_source"),
                  ],
                  [
                     InlineKeyboardButton(text="❌ Back", callback_data="sinon_back")
@@ -355,7 +355,106 @@ def sinon_callback_data(update, context):
                 timeout=5,
                 disable_web_page_preview=False,
         )
-
+    elif query.data == "sinon_basichelp":
+        query.message.edit_caption(
+            text=f"*Here's basic Help regarding* *How to use Me?*"
+            f"\n\n• Firstly Add @SinonRobot to your group by pressing [here](http://t.me/SinonRobot?startgroup=true)\n"
+            f"\n• After adding promote me manually with full rights for faster experience.\n"
+            f"\n• Than send `/admincache@SinonRobot` in that chat to refresh admin list in My database.\n"
+            f"\n\n*All done now use below given button's to know about use!*\n"
+            f"",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="👨🏻‍💼 Admins", callback_data="sinon_admin"),
+                    InlineKeyboardButton(text="📝 Notes", callback_data="sinon_notes"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="🗯️ Support", callback_data="sinon_support"),
+                    InlineKeyboardButton(text="🗞️ Credits", callback_data="sinon_credit"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="« Back", callback_data="sinon_"),
+                 
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "sinon_admin":
+        query.message.edit_caption(
+            text=f"*Let's make your group bit effective now*"
+            f"\nCongragulations,now ready to manage your group."
+            f"\n\n*Admin Tools*"
+            f"\nBasic Admin tools help you to protect and powerup your group."
+            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
+            f"\n\n*Welcome*"
+            f"\nLets set a welcome message to welcome new users coming to your group."
+            f"send `/setwelcome [message]` to set a welcome message!",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="« Back", callback_data="nino_basichelp")]]
+            ),
+        )
+    elif query.data == "sinon_notes":
+        query.message.edit_caption(
+            text=f"<b> Setting up notes</b>"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="« Back", callback_data="sinon_basichelp")]]
+            ),
+        )
+    elif query.data == "sinon_support":
+        query.message.edit_caption(
+            text="*๏ Nino Support Chats*"
+            "\Join My Support Group/Channel for see or report a problem on Sinon.",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="🗯️ Support", url="t.me/SinonSupport"),
+                    InlineKeyboardButton(text="🔔 Updates", url="t.me/SinonUpdates"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="« Back", callback_data="sinon_basichelp"),
+                 
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "sinon_credit":
+        query.message.edit_caption(
+            text=f"*๏ Credit For Sinon* \n"
+            f"\n Here Is Devoloper Of Sinon",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Alone X", url="t.me/ItzAloneX"),
+                 ],
+                 [
+                    InlineKeyboardButton(text=" « Back", callback_data="sinon_basichelp"),
+                 
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "sinon_source":
+        query.message.edit_caption(
+            text=f"<b>Source Of Sinon</b>"
+            f"\nSinon Is The Redisigned Version Of Some Open Source Codes.".
+            f"\nSinon Source Code Was Rewritten by @ItzAlone and All Of Conrtibutor For Help Sinon"
+            f"\n\If Any Question About Pachirisu, Let Us Know At @SinonSupport.",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="sinon_")]]
+            ),
+        )
 @run_async
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
