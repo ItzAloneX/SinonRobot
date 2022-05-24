@@ -40,7 +40,6 @@ jikanpy
 
 coffeehouse==2.2.4
 regex
-pythonping
 bleach
 git+https://github.com/python-telegram-bot/ptbcontrib.git
 wikipedia
@@ -52,7 +51,7 @@ alphabet_detector
 pybase64
 pySmartDL
 validators
-sinons.py==1.0.3
+
 aiofiles
 pyrate-limiter
 cachetools
@@ -71,7 +70,7 @@ youtube-search-python
 asyncio
 dateparser==1.0.0
 pymongo==3.12.1
-dnspython==2.1.0
+dnspython
 secureme
 apscheduler
 emoji-country-flag
@@ -89,7 +88,7 @@ better_profanity
 nudepy
 motor
 cloudscraper
-python-arq==6.0.3
+python-arq
 pytube
 tldextract
 cloudmersive_virus_api_client
@@ -122,7 +121,5 @@ requests
 six==1.16.0
 soupsieve==2.2.1
 SpeechRecognition==3.8.1
-python-dotenv==0.20.0
 urllib3==1.26.7
-python-rapidjson==1.5
 wikipedia==1.4.0
