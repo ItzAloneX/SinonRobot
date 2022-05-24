@@ -447,13 +447,12 @@ def sinon_callback_data(update, context):
 
     elif query.data == "sinon_source":
         query.message.edit_caption(
-            text=f"<b>Source Of Sinon</b>"
-            f"\nSinon Is The Redisigned Version Of Some Open Source Codes.",
-            f"\nSinon Source Code Was Rewritten by @ItzAloneX.",
-            f"\n\If Any Question About Pachirisu, Let Us Know At @SinonSupport.",
+            text=f"*Sinon Is The Redisigned Version Of Some Open Source Codes.*"
+            f"\nSinon Source Code Was Rewritten by @ItzAloneX."
+            f"\nIf Any Question About Pachirisu, Let Us Know At @SinonSupport.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text=" « Back", callback_data="sinon_")]]
+                [[InlineKeyboardButton(text="« Back", callback_data="sinon_")]]
             ),
         )
 
