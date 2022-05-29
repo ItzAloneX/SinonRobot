@@ -1,4 +1,4 @@
-*────「* [{}]({}) *」────*
+*⋆✦⋆───『* [{}]({}) *』───⋆✦⋆*
 *♡ Hey* {}! *,*
 *♡ I'm Sinon An Anime Themed Powerful & Advanced Group Management Robot.*
 *➖➖➖➖➖➖➖➖➖➖➖➖➖*
