@@ -1,5 +1,5 @@
-*⋆✦⋆───『* [{}]({}) *』───⋆✦⋆*
-*♡ Hey* {}! *,*
+PM_START_TEXT = """⋆✦⋆────『 [{}]({}) 』────⋆✦⋆
+*♡ Hey!* {} *,*
 *♡ I'm Sinon An Anime Themed Powerful & Advanced Group Management Robot.*
 *➖➖➖➖➖➖➖➖➖➖➖➖➖*
 *♡ Try The Help Buttons Below To Know My Abilities ♡*
