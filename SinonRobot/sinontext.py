@@ -1,11 +1,10 @@
-PM_START_TEXT = """
-*────「* [{}](https://telegra.ph/file/9ce8d2ef564eaab4bb104.jpg) *」────*
-*Hey There , I Am Sinon,
-I Am An Anime Themed Advance Group Management Bot With Lots Of Speciality.*
-*➖➖➖➖➖➖➖➖➖➖➖➖➖
-◈ Try The Help Buttons Below To Know My Abilities ♡*
+────「 [{}] 」────
+*Hey* {} *,*
+*♡ I'm Sinon An Anime Themed Powerful & Advanced Group Management Robot.*
+*➖➖➖➖➖➖➖➖➖➖➖➖➖*
+*♡ Try The Help Buttons Below To Know My Abilities ♡*
 
-Powered By :- @YatoNetwork
+*Powered By :- @YatoNetwork*
 """
 
 SINON_IMG = (
@@ -17,7 +16,7 @@ SINON_IMG = (
       "https://telegra.ph/file/f9290f9fcf04da3dfe42e.jpg",
 )
 
-TEXXT = "<b>Heya</b> {} <b>Do you Like me?</b>"
+TEXXT = "<b>Hey</b> {} <b>Do you Like me?</b>"
 
 SINON_N_IMG = (
       "https://telegra.ph/file/d6c152cd3bdb9a446c338.jpg",
