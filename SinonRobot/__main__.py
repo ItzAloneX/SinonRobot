@@ -212,7 +212,7 @@ def start(update: Update, context: CallbackContext):
                   [                  
                        InlineKeyboardButton(
                              text="🗯️ Support",
-                             url=f"https://t.me/SinonSupport"),
+                             url="https://t.me/SinonSupport"),
                        InlineKeyboardButton(
                              text="🔔 Updates",
                              url="https://t.me/SinonUpdates")
@@ -395,7 +395,7 @@ def sinon_callback_data(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="« Back", callback_data="nino_basichelp")]]
+                [[InlineKeyboardButton(text=" « Back", callback_data="nino_basichelp")]]
             ),
         )
     elif query.data == "sinon_notes":
@@ -452,10 +452,10 @@ def sinon_callback_data(update, context):
             f"\nIf Any Question About Pachirisu, Let Us Know At @SinonSupport.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="« Back", callback_data="sinon_")]]
-            ),
-        )
-
+                [[InlineKeyboardButton(text=" « Back", callback_data="sinon_")]]
+               ),
+             )
+        
 @run_async
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
@@ -496,8 +496,8 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
-                  InlineKeyboardButton(text="Support",
-                                       url="t.me/SinonSupport")]]))
+                [[InlineKeyboardButton(text="Support",
+                                       url="t.me/SinonSupport"),
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -562,6 +562,7 @@ def settings_button(update: Update, context: CallbackContext):
                         text="Back",
                         callback_data="stngs_back({})".format(chat_id))
                 ]]))
+
 
         elif prev_match:
             chat_id = prev_match.group(1)
