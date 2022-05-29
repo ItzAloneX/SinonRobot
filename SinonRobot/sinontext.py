@@ -1,10 +1,10 @@
 ────「 [{}] 」────
-*Hey* {} *,*
+*♡ Hey* {} *,*
 *♡ I'm Sinon An Anime Themed Powerful & Advanced Group Management Robot.*
 *➖➖➖➖➖➖➖➖➖➖➖➖➖*
 *♡ Try The Help Buttons Below To Know My Abilities ♡*
 
-*Powered By :- @YatoNetwork*
+*♡ Powered By :- @YatoNetwork*
 """
 
 SINON_IMG = (
