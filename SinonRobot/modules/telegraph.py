@@ -1,14 +1,14 @@
 from SinonRobot.events import register
 from SinonRobot import telethn as tbot
 TMP_DOWNLOAD_DIRECTORY = "./"
-from telethon import events
+from telethon import events, Button, custom, version
 import os
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
-Alone = "sinon"
+emilia = "EMILIA"
 telegraph = Telegraph()
-r = telegraph.create_account(short_name=sinon)
+r = telegraph.create_account(short_name=emilia)
 auth_url = r["auth_url"]
 
 
@@ -40,8 +40,9 @@ async def _(event):
             else:
                 end = datetime.now()
                 ms_two = (end - start).seconds
+                sinon = [[Button.url("📤 Telegraph Link", f"http://telegra.ph{media_urls[0]}")]]
                 os.remove(downloaded_file_name)
-                await h.edit("Uploaded to https://telegra.ph{})".format(media_urls[0]), link_preview=True)
+                await h.edit("Perview[!](https://telegra.ph{})".format(media_urls[0]), link_preview=True, buttons=sinon)
         elif input_str == "xt":
             user_object = await tbot.get_entity(r_message.sender_id)
             title_of_page = user_object.first_name # + " " + user_object.last_name
@@ -69,9 +70,9 @@ async def _(event):
             )
             end = datetime.now()
             ms = (end - start).seconds
-            await event.reply("Pasted To https://telegra.ph/{} in {} seconds.".format(response["path"], ms), link_preview=True)
+            await event.reply("Pasted to [Telegraph](https://telegra.ph/{}) in {} seconds.".format(response["path"], ms), link_preview=True)
     else:
-        await event.reply("*Reply to a message to get a permanent telegra.ph link.*")
+        await event.reply("**Reply to a message to get a permanent telegra.ph link.**")
 
 
 def resize_image(image):
@@ -79,10 +80,6 @@ def resize_image(image):
     im.save(image, "PNG")
 
 
-__help__ = """
-*I can upload files to Telegraph*
- ♡ /tm  : Get Telegraph Link Of Replied Media
- ♡ /txt : Get Telegraph Link of Replied Text
-"""
+
 
 __mod_name__ = "Telegraph"
