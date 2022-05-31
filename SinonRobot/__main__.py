@@ -81,13 +81,13 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*⋆✦⋆────『* [Sinon 詩乃](https://telegra.ph/file/12d50d9d064d6a985dabe.jpg) *』────⋆✦⋆*
+*⋆✦⋆────『* [Sinon 詩乃](t.me/SinonRobot) *』────⋆✦⋆*
 *♡ Hey!* {}
 *♡ I'm Sinon An Anime Themed Powerful & Advanced Group Management Robot.*
 *➖➖➖➖➖➖➖➖➖➖➖➖➖*
 *♡ Try The Help Buttons Below To Know My Abilities.*
 
-*♡ Powered By :- @YatoNetwork*
+*♡ Powered By :- @YatoNetwork*[.](https://telegra.ph/file/12d50d9d064d6a985dabe.jpg)
 """
 
 buttons = [
@@ -95,7 +95,7 @@ buttons = [
         InlineKeyboardButton(text="🔐 Help​", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="💞 About Me", callback_data="sinon_"),
+        InlineKeyboardButton(text="🌺 About Me", callback_data="sinon_"),
         InlineKeyboardButton(text="🔄 Try Inline", switch_inline_query_current_chat=""),
     ],
     [
@@ -107,9 +107,15 @@ buttons = [
 ]
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+*♡ Main Commands*
 
-EMI_IMG = "https://telegra.ph/file/2a100b2ec7707179b65f6.jpg"
+*♡* /help - *Click this to know about myself.*
+*♡* /donate - *For Giving Donations To Me.*
+*♡* /settings - *In PM : will send you your settings for all supported modules.*
+
+*♡ In A Group : Will Redirect You To Pm With All That Chats Settings.
+For All Commands Use* [/ or !](https://telegra.ph/file/073e002ac0acf1685f940.jpg)"""
+
 
 DONATE_STRING = """*♡ Add Me To Your Chat That Is Donation For Me.*"""
 
@@ -425,10 +431,10 @@ def sinon_about_callback(update, context):
         query.message.edit_text(
             text=f"*♡ Let's make your group bit effective now*"
             f"\nCongragulations, {dispatcher.bot.first_name} now ready to manage your group."
-            "\n\n*Admin Tools*"
+            "\n\n*♡ Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
+            "\n\n*♡ Greetings*"
             "\nLets set a welcome message to welcome new users coming to your group."
             "\nsend `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
@@ -451,15 +457,15 @@ def sinon_about_callback(update, context):
         )
     elif query.data == "sinon_support":
         query.message.edit_text(
-            text=f"*๏ {dispatcher.bot.first_name} support chats*"
-            "\n♡ Join My Support Group/Channel for see or report a problem on Sinon.",
+            text=f"*♡ Sinon 詩乃 Support Chats*"
+            "\n\n♡ Join My Support Group/Channel for see or report a problem on Sinon.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Support", url="t.me/SinonSupport"),
+                        InlineKeyboardButton(text="🗯️ Support", url="t.me/SinonSupport"),
                         InlineKeyboardButton(
-                            text="Updates", url="https://t.me/SinonSupport"
+                            text="🔔 Updates", url="https://t.me/SinonUpdates"
                         ),
                     ],
                     [
@@ -471,8 +477,8 @@ def sinon_about_callback(update, context):
 
     elif query.data == "sinon_credit":
         query.message.edit_text(
-            text=f"<b>♡ Credis for Sinon</b>\n"
-            f"\nHere Developers Making The Sinon",
+            text=f"<b>♡ Credis for Sinon 詩乃</b>\n"
+            f"\nHere Developers Of Sinon",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -490,7 +496,7 @@ def sinon_about_callback(update, context):
 def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
-        query.message.edit_text(
+        query.message.edit_caption(
             text="*Sinon Source Is Rewritten By @ItzAlone. Form Others Open Source Projects.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -544,7 +550,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ​",
+                            text="🔐 Help​",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
