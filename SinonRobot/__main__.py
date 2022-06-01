@@ -400,7 +400,7 @@ def sinon_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="💾 Source​", callback_data="source_"
+                            text="💾 Source​", callback_data="sinon_source"
                         ),
                     ],
                     [
@@ -495,9 +495,9 @@ def sinon_about_callback(update, context):
 
 def Source_about_callback(update, context):
     query = update.callback_query
-    if query.data == "source_":
-        query.message.edit_caption(
-            text="*Sinon Source Is Rewritten By @ItzAlone. Form Others Open Source Projects.",
+    if query.data == "sinon_source":
+        query.message.edit_text(
+            text="*Sinon Source Is Rewritten By @ItzAloneX. From Open Source Projects.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
