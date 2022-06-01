@@ -497,8 +497,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "sinon_source":
         query.message.edit_text(
-            text="*♡ Sinon Is The Redisigned Version Of Open Source Projects.\n♡ Sinon Source Code Was Rewritten By @ItzAloneX And All Of Conrtibutor For Help Sinon.\n♡ If Any Question About Sinon, 
-Let Us Know At @SinonSupport.",
+            text="*♡ Sinon Is The Redisigned Version Of Open Source Projects.\n♡ Sinon Source Code Was Rewritten By @ItzAloneX And All Of Conrtibutor For Help Sinon.\n♡ If Any Question About Sinon,Let Us Know At @SinonSupport.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
