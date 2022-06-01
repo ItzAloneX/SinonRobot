@@ -497,7 +497,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "sinon_source":
         query.message.edit_text(
-            text="*Sinon Source Is Rewritten By @ItzAloneX. From Open Source Projects.",
+            text="*♡ Sinon Is The Redisigned Version Of Open Source Projects.\n♡ Sinon Source Code Was Rewritten By @ItzAloneX And All Of Conrtibutor For Help Sinon.\n♡ If Any Question About Sinon, 
+Let Us Know At @SinonSupport.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -792,10 +793,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}",
-                f"""**Sinon 詩乃 Started!**
-
-**Python:** `{memek()}`
-**Telegram Library:** `v{peler}`""",
+                f"""**[Sinon 詩乃 Started!](https://telegra.ph/file/84613a50050e3991f404b.jpg)**""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:
