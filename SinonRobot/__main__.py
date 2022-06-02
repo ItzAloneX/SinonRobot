@@ -87,7 +87,7 @@ PM_START_TEXT = """
 *➖➖➖➖➖➖➖➖➖➖➖➖➖*
 *♡ Try The Help Buttons Below To Know My Abilities.*
 
-*♡ Powered By :- @YatoNetwork*[.](https://telegra.ph/file/12d50d9d064d6a985dabe.jpg)
+*♡ Powered By :- @YatoNetwork*[.](https://telegra.ph/file/12d50d9d064d6a985dabe.png)
 """
 
 buttons = [
