@@ -462,7 +462,7 @@ def sinon_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(SINO_CMDS),
         )
     
-     elif query.data == "sinon_notes":
+    elif query.data == "sinon_notes":
         query.message.edit_text(
             text="""<b> ♡ Setting Up Notes </b>"
             
@@ -474,7 +474,7 @@ def sinon_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
             ),
         )
-     elif query.data == "sinon_admin":
+    elif query.data == "sinon_admin":
         query.message.edit_text(
             text=SINON_ADMIN,
             parse_mode=ParseMode.MARKDOWN,
@@ -483,7 +483,7 @@ def sinon_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
             ),
         )    
-     elif query.data == "sinon_support":
+    elif query.data == "sinon_support":
         query.message.edit_text(
             text="*♡ Sinon Support Chats*"            
                  "\n\n♡Join Support Group/Channel",
@@ -504,7 +504,7 @@ def sinon_about_callback(update, context):
                 ]
             ),
         )
-     elif query.data == "sinon_credit":
+    elif query.data == "sinon_credit":
         query.message.edit_text(
             text="<b> ♡ Credits Of Sinon </b>"            
                  "\n\n♡ Here Some Developers Helping In Making Of Sinon",
@@ -521,7 +521,7 @@ def sinon_about_callback(update, context):
                 ]
             ),
         )
-     elif query.data == "aboutmanu_back":
+    elif query.data == "aboutmanu_back":
         query.message.edit_text(
             PM_START_TEXT.format(
                 escape_markdown(context.bot.first_name),
