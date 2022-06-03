@@ -139,6 +139,16 @@ SINO_BASIC = """
 ♡ `Than send` `/admincache@SinonRobot` `in that chat to refresh admin list in My database.
 *All done now use below given button's to know about use!*"""
 
+SINON_ADMIN = """
+*Let's Make Your Group Bit Effective Now* 
+♡ Congragulations, Sinon now ready to manage your group.
+*Admin Tools*
+♡ Basic Admin tools help you to protect and powerup your group.
+♡ You can ban members, Kick members, Promote someone as admin through commands of bot.
+*Welcome*
+♡ Lets set a welcome message to welcome new users coming to your group.
+♡ Send `/setwelcome [message]` to set a welcome message!"""
+
 SINO_CMDS = [
     [
         InlineKeyboardButton(text="👷🏻‍♂️ Admin", callback_data="sinon_admin"),
@@ -468,15 +478,7 @@ def sinon_about_callback(update, context):
         )
      elif query.data == "sinon_admin":
         query.message.edit_text(
-            text="""*Let's Make Your Group Bit Effective Now*
-            
-            ♡ Congragulations, Sinon now ready to manage your group.
-            *Admin Tools*
-            ♡ Basic Admin tools help you to protect and powerup your group.
-            ♡ You can ban members, Kick members, Promote someone as admin through commands of bot.
-            *Welcome*
-            ♡ Lets set a welcome message to welcome new users coming to your group.
-            ♡ Send `/setwelcome [message]` to set a welcome message!""",
+            text=SINON_ADMIN,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -485,9 +487,8 @@ def sinon_about_callback(update, context):
         )    
      elif query.data == "sinon_support":
         query.message.edit_text(
-            text="""*♡ Sinon Support Chats*
-            
-            ♡Join Support Group/Channel""",
+            text="*♡ Sinon Support Chats*"            
+                 "\n\n♡Join Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -507,9 +508,8 @@ def sinon_about_callback(update, context):
         )
      elif query.data == "sinon_credit":
         query.message.edit_text(
-            text="""<b> ♡ Credits Of Sinon </b>
-            
-            ♡ Here Some Developers Helping In Making Of Sinon""",
+            text="<b> ♡ Credits Of Sinon </b>"            
+                 "\n\n♡ Here Some Developers Helping In Making Of Sinon",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
