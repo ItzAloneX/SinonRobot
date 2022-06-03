@@ -421,21 +421,6 @@ def sinon_about_callback(update, context):
             disable_web_page_preview=True,
         )
 
-    elif query.data == "lovelyx_pro":
-        query.message.edit_text(
-            text="""<b>Hey, Welcome to Lovely configuration Tutorial
-Before we go, I need admin permissions in this chat to work properly
-1) Click Manage Group
-2) Go to Administrators and add</b> @LOVELYR_OBOT <b>as Admin
-3) Giving full permissions make Lovely fully useful</b>""",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-              [[InlineKeyboardButton(text="previous", callback_data="lovelyx_tutorials"),
-                InlineKeyboardButton(text="next", callback_data="lovelyx_help")],               
-              ]
-            ),
-        )
-
     elif query.data == "sinon_basichelp":
         query.message.edit_text(
             text="""*Here's basic Help regarding* *How to use Me?*"           
