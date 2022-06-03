@@ -119,6 +119,19 @@ HELP_STRINGS = """
 *♡ In A Group : Will Redirect You To Pm With All That Chats Settings.
 For All Commands Use* [/ or !](https://telegra.ph/file/073e002ac0acf1685f940.jpg)"""
 
+SINON = """
+*👋 Hi Again!  The name's Sinon \n\nA powerful group management bot built to help you manage your group easily.*
+💕 Join [Sinon Support](https://t.me/SinonSupport) To Keep Yourself Updated About Sinon.
+I have the Advanced Group Managing functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers.
+♡ I can restrict users.
+♡ I can greet users with customizable welcome messages and even set a group's rules.
+♡ I have an advanced anti-flood system.
+♡ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+♡ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+♡ I check for admins' permissions before executing any command and more stuffs
+If you have any question about *Sinon*, let us know at @SinonSupport.
+👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇"""
+
 SINO_BASIC = """
 *Here's basic Help regarding* *How to use Me?*"           
 ♡ Firstly Add Sinon to your group by pressing` [here](http://t.me/SinonRobot?startgroup=true)
@@ -394,17 +407,7 @@ def sinon_about_callback(update, context):
     query = update.callback_query
     if query.data == "sinon_":
         query.message.edit_text(
-               text="""*👋 Hi Again!  The name's Sinon \n\nA powerful group management bot built to help you manage your group easily.*
-             💕 Join [Sinon Support](https://t.me/SinonSupport) To Keep Yourself Updated About Sinon.
-             I have the Advanced Group Managing functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers.
-             ♡ I can restrict users.
-             ♡ I can greet users with customizable welcome messages and even set a group's rules.
-             ♡ I have an advanced anti-flood system.
-             ♡ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-             ♡ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-             ♡ I check for admins' permissions before executing any command and more stuffs
-             If you have any question about *Sinon*, let us know at @SinonSupport.
-            👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇""",
+               text=SINON,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
