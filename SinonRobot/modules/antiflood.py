@@ -353,6 +353,8 @@ This will mute users if they send more than 10 messages in a row, bots are ignor
  `6h` = 6 hours
  `3d` = 3 days
  `1w` = 1 week
+
+*♡ Powered By :- @YatoNetwork*
  """
 
 __mod_name__ = "Anti-Flood"
