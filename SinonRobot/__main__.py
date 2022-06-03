@@ -119,6 +119,21 @@ HELP_STRINGS = """
 *♡ In A Group : Will Redirect You To Pm With All That Chats Settings.
 For All Commands Use* [/ or !](https://telegra.ph/file/073e002ac0acf1685f940.jpg)"""
 
+SINO_CMDS = [
+    [
+        InlineKeyboardButton(text="👷🏻‍♂️ Admin", callback_data="sinon_admin"),
+        InlineKeyboardButton(text="📝 Notes", callback_data="sinon_notes"),
+    ],
+    [
+        InlineKeyboardButton(text="🗯️ Support", callback_data="sinon_support"),
+        InlineKeyboardButton(text="ℹ️ Credit", callback_data="sinon_credit"),
+    ],
+    [
+        InlineKeyboardButton(text="💾 Source", callback_data="source_"),
+    [
+        InlineKeyboardButton(text="Back", callback_data="sinon_back"),              
+    ],
+]
 
 DONATE_STRING = """*♡ Add Me To Your Chat That Is Donation For Me.*"""
 
@@ -429,22 +444,7 @@ def sinon_about_callback(update, context):
         parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="👷🏻‍♂️ Admin", callback_data="sinon_admin"),
-                    InlineKeyboardButton(text="📝 Notes", callback_data="sinon_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="🗯️ Support", callback_data="sinon_support"),
-                    InlineKeyboardButton(text="ℹ️ Credit", callback_data="sinon_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="💾 Source", callback_data="source_"),
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="sinon_back"),
-               
-                 ]
-                ]
+                SINO_CMDS
             ),
         )
     
