@@ -421,7 +421,7 @@ def sinon_about_callback(update, context):
             disable_web_page_preview=True,
         )
 
-    elif query.data == "sinon_basichelp":
+     elif query.data == "sinon_basichelp":
         query.message.edit_text(
             text="""*Here's basic Help regarding* *How to use Me?*"
             
@@ -451,7 +451,7 @@ def sinon_about_callback(update, context):
             ),
         )
     
-    elif query.data == "sinon_notes":
+     elif query.data == "sinon_notes":
         query.message.edit_text(
             text="""<b> ♡ Setting Up Notes </b>"
             
@@ -463,7 +463,7 @@ def sinon_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
             ),
         )
-    elif query.data == "sinon_admin":
+     elif query.data == "sinon_admin":
         query.message.edit_text(
             text="""*Let's Make Your Group Bit Effective Now*
             
@@ -480,7 +480,7 @@ def sinon_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
             ),
         )    
-    elif query.data == "sinon_support":
+     elif query.data == "sinon_support":
         query.message.edit_text(
             text="""*♡ Sinon Support Chats*
             
@@ -502,7 +502,7 @@ def sinon_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "sinon_credit":
+     elif query.data == "sinon_credit":
         query.message.edit_text(
             text="""<b> ♡ Credits Of Sinon </b>
             
@@ -520,7 +520,7 @@ def sinon_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "aboutmanu_back":
+     elif query.data == "aboutmanu_back":
         query.message.edit_text(
             PM_START_TEXT.format(
                 escape_markdown(context.bot.first_name),
