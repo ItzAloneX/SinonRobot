@@ -567,7 +567,7 @@ def sinon_about_callback(update, context):
         )
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
-            text="<b> ♡ Admin Permissions</b>
+            text="""<b> ♡ Admin Permissions</b>
 To avoid slowing down, Sinon caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Sinon will only find out ~10 minutes later.
 If you want to update them immediately, you can use the /admincache command,thta'll force Sinon to check who the admins are again and their permissions
 If you are getting a message saying:
@@ -631,14 +631,14 @@ __Terms & Conditions will be changed anytime__""",
         )
     elif query.data == "aboutmanu_cbguide":
         query.message.edit_text(
-            text=f"*♡ How To Setup Music*\n"
-            f"\n1. **First, add me to your group."
-            f"\n2. **Then promote me as admin and give all permissions except anonymous admin."
-            f"\n3. **After promoting me, type /admincache in group to update the admin list."
-            f"\n4. **Add @SinonAssistant to your group."
-            f"\n5. **Turn on the video chat first before start to play music.\n\n"
-            f"\n📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or you can ask Admins in @idzeroidsupport.**\n"
-            f"\n💫 __Powered by Sinon A.I__\n",
+            text="""*♡ How To Setup Music*
+1. **First, add me to your group.
+2. **Then promote me as admin and give all permissions except anonymous admin.
+3. **After promoting me, type /admincache in group to update the admin list.
+4. **Add @SinonAssistant to your group.
+5. **Turn on the video chat first before start to play music.
+📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or you can ask Admins in @idzeroidsupport.**
+💫 __Powered by Sinon A.I__""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -656,16 +656,16 @@ __Terms & Conditions will be changed anytime__""",
         )
     elif query.data == "aboutmanu_cbhelps":
         query.message.edit_text(
-            text=f"* ♡ Music Commands *\n"
-            f"\n1. **/play (name song) for playing music."
-            f"\n2. **/pause for paused music."
-            f"\n3. **/resume for resume music."
-            f"\n4. **/stop or /end for end music playing."
-            f"\n5. **/music (name song) for download song."
-            f"\n6. **/video (name video) for download video."
-            f"\n7. **/lyrics for searching lyrics.\n\n"
-            f"\n📌 **Also you can download music or video with push button menu.**\n"
-            f"\n💫 __Powered by Sinon A.I__\n",
+            text="""* ♡ Music Commands *
+1. **/play (name song) for playing music.
+2. **/pause for paused music.
+3. **/resume for resume music.
+4. **/stop or /end for end music playing.
+5. **/music (name song) for download song.
+6. **/video (name video) for download video.
+7. **/lyrics for searching lyrics.
+📌 **Also you can download music or video with push button menu.**
+💫 __Powered by Sinon A.I__""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
