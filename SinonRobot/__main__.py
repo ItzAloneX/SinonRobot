@@ -457,7 +457,7 @@ def sinon_about_callback(update, context):
     elif query.data == "sinon_basichelp":
         query.message.edit_text(
             text=SINO_BASIC,           
-        parse_mode=ParseMode.MARKDOWN,
+        parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(SINO_CMDS),
         )
