@@ -421,7 +421,7 @@ def sinon_about_callback(update, context):
             disable_web_page_preview=True,
         )
 
-     elif query.data == "sinon_basichelp":
+    elif query.data == "sinon_basichelp":
         query.message.edit_text(
             text="""*Here's basic Help regarding* *How to use Me?*"
             
