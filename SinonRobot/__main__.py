@@ -166,7 +166,7 @@ DONATE_STRING = """*♡ Add Me To Your Chat That Is Donation For Me.*"""
 HOWTOUSE = """
 *♡ How To Use Sinon*
 If You Can Also Add Sinon To Your Chats By Clicking [Here](http://t.me/SinonRobot?startgroup=true) And Selecting Chat.
-You Can get support Sinon by joining [Support](https://t.me/Sinonsupport).
+You Can get support Sinon by joining [Support](https://t.me/Sinonsupport)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
