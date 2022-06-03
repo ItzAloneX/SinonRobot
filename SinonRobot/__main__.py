@@ -562,7 +562,6 @@ def sinon_about_callback(update, context):
                 ]
             ),
         )
-    
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ♡ Admin Permissions</b>"
@@ -606,7 +605,7 @@ def sinon_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
         )
-   elif query.data == "aboutmanu_tac":
+    elif query.data == "aboutmanu_tac":
         query.message.edit_text(
             text=f"<b> ♡ Terms and Conditions </b>\n"
             f"\n__To Use This Bot, You Need To Read Terms and Conditions Carefully.__\n"
