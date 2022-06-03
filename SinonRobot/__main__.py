@@ -451,9 +451,9 @@ def sinon_about_callback(update, context):
             f"\nTo avoid slowing down, Sinon caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Sinon will only find out ~10 minutes later."
             f"\n\nIf you want to update them immediately, you can use the /admincache command,thta'll force Sinon to check who the admins are again and their permissions"
             f"\n\nIf you are getting a message saying:"
-            f"\n<Code>You must be this chat administrator to perform this action!</code>
+            f"\n`You must be this chat administrator to perform this action!`"
             f"\nThis has nothing to do with Sinon rights; this is all about your permissions as an admin. Sinon respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Sinon. Similarly, to change Sinon settings, you need to have the Change group info permission."
-            f"\n\nThe message very clearly says that you need these rights - <i>not Sinon</i>",
+            f"\n\nThe message very clearly says that you need these rights - __not Sinon__",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
@@ -491,7 +491,7 @@ def sinon_about_callback(update, context):
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
             text=f"<b> ♡ Terms and Conditions </b>\n"
-            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
+            f"\n__To Use This Bot, You Need To Read Terms and Conditions Carefully.__\n"
             f"\n♡ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
             f"\n♡ Always try to keep credits, so \n  This hardwork is done by @ItzAloneX spending many sleepless nights.. So, Respect it."
             f"\n♡ Some modules in this bot is owned by different authors, So, \n  All credits goes to them."
@@ -499,7 +499,7 @@ def sinon_about_callback(update, context):
             f"\n♡ If you asking nonsense in Support \n  Chat, you will get warned/banned."
             f"\n♡ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
             f"\n\nFor any kind of help, related to this bot, Join @SinonSupport."
-            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
+            f"\n\n__Terms & Conditions will be changed anytime__\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
