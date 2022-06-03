@@ -372,17 +372,17 @@ def sinon_about_callback(update, context):
     query = update.callback_query
     if query.data == "sinon_":
         query.message.edit_text(
-               text=f"*👋 Hi Again!  The name's Sinon \n\nA powerful group management bot built to help you manage your group easily.* "
-            f"\n\n 💕 Join [Sinon Support](https://t.me/SinonSupport) To Keep Yourself Updated About Sinon."
-            f"\n\n I have the Advanced Group Managing functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\n ♡ I can restrict users."
-            f"\n\n ♡ I can greet users with customizable welcome messages and even set a group's rules."
-            f"\n\n ♡ I have an advanced anti-flood system."
-            f"\n\n ♡ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            f"\n\n ♡ I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            f"\n\n ♡ I check for admins' permissions before executing any command and more stuffs"
-            f"\n\n If you have any question about *Sinon*, let us know at @SinonSupport."
-            f"\n\n👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇",
+               text="""*👋 Hi Again!  The name's Sinon \n\nA powerful group management bot built to help you manage your group easily.*
+             💕 Join [Sinon Support](https://t.me/SinonSupport) To Keep Yourself Updated About Sinon.
+             I have the Advanced Group Managing functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers.
+             ♡ I can restrict users.
+             ♡ I can greet users with customizable welcome messages and even set a group's rules.
+             ♡ I have an advanced anti-flood system.
+             ♡ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+             ♡ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+             ♡ I check for admins' permissions before executing any command and more stuffs
+             If you have any question about *Sinon*, let us know at @SinonSupport.
+            👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -401,6 +401,122 @@ def sinon_about_callback(update, context):
                         )
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                ]
+            ),
+        )
+      elif query.data == "sinon_back":
+        first_name = update.effective_user.first_name
+        uptime = get_readable_time((time.time() - StartTime))
+        query.message.edit_text(
+        query.message.edit_text(
+            PM_START_TEXT.format(
+                escape_markdown(first_name),
+                escape_markdown(uptime),
+                sql.num_users(),
+                sql.num_chats(),
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )
+
+    elif query.data == "sinon_basichelp":
+        query.message.edit_text(
+            text="""*Here's basic Help regarding* *How to use Me?*"
+            
+            ♡ Firstly Add Sinon to your group by pressing` [here](http://t.me/SinonRobot?startgroup=true)
+            ♡ After adding promote me manually with full rights for faster experience.
+            ♡ `Than send` `/admincache@SinonRobot` `in that chat to refresh admin list in My database.
+            *All done now use below given button's to know about use!*""",           
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="👷🏻‍♂️ Admin", callback_data="sinon_admin"),
+                    InlineKeyboardButton(text="📝 Notes", callback_data="sinon_notes"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="🗯️ Support", callback_data="sinon_support"),
+                    InlineKeyboardButton(text="ℹ️ Credit", callback_data="sinon_credit"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="💾 Source", callback_data="source_"),
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="sinon_back"),
+                 
+                 ]
+                ]
+            ),
+        )
+    
+    elif query.data == "sinon_notes":
+        query.message.edit_text(
+            text="""<b> ♡ Setting Up Notes </b>"
+            
+             You can save message/media/audio or anything as notes
+            ♡ To get a note simply use # at the beginning of a word
+            ♡ You can also set buttons for notes and filters (refer help menu)""",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
+            ),
+        )
+    elif query.data == "sinon_admin":
+        query.message.edit_text(
+            text="""*Let's Make Your Group Bit Effective Now*
+            
+            ♡ Congragulations, Sinon now ready to manage your group.
+            *Admin Tools*
+            ♡ Basic Admin tools help you to protect and powerup your group.
+            ♡ You can ban members, Kick members, Promote someone as admin through commands of bot.
+            *Welcome*
+            ♡ Lets set a welcome message to welcome new users coming to your group.
+            ♡ Send `/setwelcome [message]` to set a welcome message!""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
+            ),
+        )    
+    elif query.data == "sinon_support":
+        query.message.edit_text(
+            text="""*♡ Sinon Support Chats*
+            
+            ♡Join Support Group/Channel""",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Network", url="t.me/YatoNetwork"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Support", url="t.me/SinonSupport"),
+                    InlineKeyboardButton(text="Updates", url="t.me/SinonUpdates"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="sinon_basichelp"),
+                 
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "sinon_credit":
+        query.message.edit_text(
+            text="""<b> ♡ Credits Of Sinon </b>
+            
+            ♡ Here Some Developers Helping In Making Of Sinon""",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Alone X", url="t.me/ItzAloneX"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="sinon_basichelp"),
+                 
+                 ]
                 ]
             ),
         )
@@ -560,125 +676,7 @@ def sinon_about_callback(update, context):
                     ],
                 ]
             ),
-        )
-      elif query.data == "sinon_back":
-        first_name = update.effective_user.first_name
-        uptime = get_readable_time((time.time() - StartTime))
-        query.message.edit_text(
-            PM_START_TEXT.format(
-                escape_markdown(first_name),
-                escape_markdown(uptime),
-                sql.num_users(),
-                sql.num_chats(),
-            ),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )
-
-    elif query.data == "sinon_basichelp":
-        query.message.edit_text(
-            text=f"*Here's basic Help regarding* *How to use Me?*"
-            
-            f"\n\n♡ Firstly Add Sinon to your group by pressing` [here](http://t.me/SinonRobot?startgroup=true)\n"
-            f"\n♡ After adding promote me manually with full rights for faster experience.\n"
-            f"\n♡ `Than send` `/admincache@SinonRobot` `in that chat to refresh admin list in My database.\n"
-            f"\n\n*All done now use below given button's to know about use!*\n"
-            f"",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="👷🏻‍♂️ Admin", callback_data="sinon_admin"),
-                    InlineKeyboardButton(text="📝 Notes", callback_data="sinon_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="🗯️ Support", callback_data="sinon_support"),
-                    InlineKeyboardButton(text="ℹ️ Credit", callback_data="sinon_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="💾 Source", callback_data="source_"),
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="sinon_back"),
-                 
-                 ]
-                ]
-            ),
-        )
-    
-    elif query.data == "sinon_notes":
-        query.message.edit_text(
-            text=f"<b> ♡ Setting Up Notes </b>"
-            
-            f"\n♡ You can save message/media/audio or anything as notes"
-            f"\n♡ To get a note simply use # at the beginning of a word"
-            f"\n\n♡ You can also set buttons for notes and filters (refer help menu)",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
-            ),
-        )
-    elif query.data == "sinon_admin":
-        query.message.edit_text(
-            text=f"*Let's Make Your Group Bit Effective Now*"
-            
-            f"\n♡ Congragulations, Sinon now ready to manage your group."
-            f"\n\n*Admin Tools*"
-            f"\n♡ Basic Admin tools help you to protect and powerup your group."
-            f"\n♡ You can ban members, Kick members, Promote someone as admin through commands of bot."
-            f"\n\n*Welcome*"
-            f"\n♡ Lets set a welcome message to welcome new users coming to your group."
-            f"\n♡ Send `/setwelcome [message]` to set a welcome message!",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
-            ),
-        )    
-    elif query.data == "sinon_support":
-        query.message.edit_text(
-            text="*♡ Sinon Support Chats*"
-            
-            "\n\n♡Join Support Group/Channel",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Network", url="t.me/YatoNetwork"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Support", url="t.me/SinonSupport"),
-                    InlineKeyboardButton(text="Updates", url="t.me/SinonUpdates"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="sinon_basichelp"),
-                 
-                 ]
-                ]
-            ),
-        )
-    elif query.data == "sinon_credit":
-        query.message.edit_text(
-            text=f"<b> ♡ Credits Of Sinon </b>\n"
-            
-            f"\n♡ Here Some Developers Helping In Making Of Sinon",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Alone X", url="t.me/ItzAloneX"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="sinon_basichelp"),
-                 
-                 ]
-                ]
-            ),
-        )
-        
-        
+        )        
 
 def Source_about_callback(update, context):
     query = update.callback_query
