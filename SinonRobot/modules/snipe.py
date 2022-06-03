@@ -36,8 +36,10 @@ def snipe(update: Update, context: CallbackContext):
 
 __help__ = """
 *Dev  only:* 
-• /snipe <chatid> <string>
+♡ /snipe <chatid> <string>
 Make me send a message to a specific chat.
+
+*♡ Powered By :- @YatoNetwork*
 """
 
 __mod_name__ = "Snipe"
