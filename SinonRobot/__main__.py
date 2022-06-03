@@ -132,13 +132,7 @@ I have the Advanced Group Managing functions like flood control, a warning syste
 If you have any question about *Sinon*, let us know at @SinonSupport.
 👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇"""
 
-SINO_BASIC = """
-*Here's basic Help regarding* *How to use Me?*
-♡ Firstly Add Sinon to your group by pressing [here](http://t.me/SinonRobot?startgroup=true)
-♡ After adding promote me manually with full rights for faster experience.
-♡ Than send` `/admincache@SinonRobot` in that chat to refresh admin list in My database.
-
-**All done now use below given button's to know about use!**"""
+SINO_BASIC = """*Here's basic Help regarding* *How to use Me?*\n\n♡ Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n\n♡ After adding promote me manually with full rights for faster experience.\n\n♡ Than send `/admincache@SinonRobot` in that chat to refresh admin list in My database.\n\n\n*All done now use below given button's to know about use!*"""
 
 SINON_ADMIN = """
 *Let's Make Your Group Bit Effective Now* 
@@ -170,9 +164,9 @@ SINO_CMDS = [
 DONATE_STRING = """*♡ Add Me To Your Chat That Is Donation For Me.*"""
 
 HOWTOUSE = """
-*♡ How To Use Sinon*"
-If You Can Also Add Sinon To Your Chats By Clicking [Here](http://t.me/SinonRobot?startgroup=true) And Selecting Chat. \n"
-You Can get support Sinon by joining [Support](https://t.me/Sinonsupport)."""
+*♡ How To Use Sinon*
+If You Can Also Add Sinon To Your Chats By Clicking [Here](http://t.me/SinonRobot?startgroup=true) And Selecting Chat.
+You Can get support Sinon by joining [Support](https://t.me/Sinonsupport).
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -473,7 +467,7 @@ def sinon_about_callback(update, context):
         query.message.edit_text(
             text="""<b> ♡ Setting Up Notes </b>"
             
-             You can save message/media/audio or anything as notes
+            ♡ can save message/media/audio or anything as notes
             ♡ To get a note simply use # at the beginning of a word
             ♡ You can also set buttons for notes and filters (refer help menu)""",
             parse_mode=ParseMode.HTML,
