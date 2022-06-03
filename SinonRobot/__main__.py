@@ -459,9 +459,7 @@ def sinon_about_callback(update, context):
             text=SINO_BASIC,           
         parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                SINO_CMDS
-            ),
+            reply_markup=InlineKeyboardMarkup(SINO_CMDS),
         )
     
      elif query.data == "sinon_notes":
