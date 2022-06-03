@@ -64,22 +64,24 @@ async def callback_query_handler(event):
   try:
     boy = event.sender_id
     PRO = await bot.get_entity(boy)
-    SINON = "YOUR DETAILS BY SINON \n\n"
-    SINON += f"FIRST NAME : {PRO.first_name} \n"
-    SINON += f"LAST NAME : {PRO.last_name}\n"
-    SINON += f"YOU BOT : {PRO.bot} \n"
-    SINON += f"RESTRICTED : {PRO.restricted} \n"
-    SINON += f"USER ID : {boy}\n"
-    SINON += f"USERNAME : {PRO.username}\n"
+    SINON = "💕 YOUR DETAILS BY SINON \n\n"
+    SINON += f"♡ FIRST NAME : {PRO.first_name} \n"
+    SINON += f"♡ LAST NAME : {PRO.last_name}\n"
+    SINON += f"♡ YOU BOT : {PRO.bot} \n"
+    SINON += f"♡ RESTRICTED : {PRO.restricted} \n"
+    SINON += f"♡ USER ID : {boy}\n"
+    SINON += f"♡ USERNAME : {PRO.username}\n"
     await event.answer(SINON, alert=True)
   except Exception as e:
     await event.reply(f"{e}")
 
 __help__ = """
-/myinfo: shows your info in inline button
+♡ `/myinfo`*:* shows your info in inline button
+
+*♡ Powered By :- @YatoNetwork*
 """
 
-__mod_name__ = "myinfo"
+__mod_name__ = "My-Info"
 __command_list__ = [
     "myinfo"
 ]
