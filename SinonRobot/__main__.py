@@ -119,6 +119,13 @@ HELP_STRINGS = """
 *♡ In A Group : Will Redirect You To Pm With All That Chats Settings.
 For All Commands Use* [/ or !](https://telegra.ph/file/073e002ac0acf1685f940.jpg)"""
 
+SINO_BASIC = """
+*Here's basic Help regarding* *How to use Me?*"           
+♡ Firstly Add Sinon to your group by pressing` [here](http://t.me/SinonRobot?startgroup=true)
+♡ After adding promote me manually with full rights for faster experience.
+♡ `Than send` `/admincache@SinonRobot` `in that chat to refresh admin list in My database.
+*All done now use below given button's to know about use!*"""
+
 SINO_CMDS = [
     [
         InlineKeyboardButton(text="👷🏻‍♂️ Admin", callback_data="sinon_admin"),
@@ -436,11 +443,7 @@ def sinon_about_callback(update, context):
 
     elif query.data == "sinon_basichelp":
         query.message.edit_text(
-            text="""*Here's basic Help regarding* *How to use Me?*"           
-♡ Firstly Add Sinon to your group by pressing` [here](http://t.me/SinonRobot?startgroup=true)
-♡ After adding promote me manually with full rights for faster experience.
-♡ `Than send` `/admincache@SinonRobot` `in that chat to refresh admin list in My database.
-*All done now use below given button's to know about use!*""",           
+            text=SINO_BASIC,           
         parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
