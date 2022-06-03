@@ -81,8 +81,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*⋆✦⋆────『* [Sinon 詩乃](t.me/SinonRobot) *』────⋆✦⋆*
-*♡ Hey!* {}
+*⋆✦⋆────『 Sinon 詩乃 』────⋆✦⋆*
+*♡ Hey!* *{}*
 *♡ I'm Sinon An Anime Themed Powerful & Advanced Group Management Robot.*
 *➖➖➖➖➖➖➖➖➖➖➖➖➖*
 *♡ Try The Help Buttons Below To Know My Abilities.*
@@ -133,11 +133,12 @@ If you have any question about *Sinon*, let us know at @SinonSupport.
 👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇"""
 
 SINO_BASIC = """
-*Here's basic Help regarding* *How to use Me?*"           
-♡ Firstly Add Sinon to your group by pressing` [here](http://t.me/SinonRobot?startgroup=true)
+*Here's basic Help regarding* *How to use Me?*
+♡ Firstly Add Sinon to your group by pressing [here](http://t.me/SinonRobot?startgroup=true)
 ♡ After adding promote me manually with full rights for faster experience.
-♡ `Than send` `/admincache@SinonRobot` `in that chat to refresh admin list in My database.
-*All done now use below given button's to know about use!*"""
+♡ Than send` `/admincache@SinonRobot` in that chat to refresh admin list in My database.
+
+**All done now use below given button's to know about use!**"""
 
 SINON_ADMIN = """
 *Let's Make Your Group Bit Effective Now* 
