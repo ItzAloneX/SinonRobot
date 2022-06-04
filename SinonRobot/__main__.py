@@ -532,7 +532,7 @@ def sinon_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="👷🏻‍♂️ Admins Settings", callback_data="sinon_permis"),                        
-                    InlineKeyboardButton(text="💬 Anti Spam", callback_data="aboutmanu_spamprot"),                      
+                    InlineKeyboardButton(text="💬 Anti Spam", callback_data="sinon_spamprot"),                      
                  ],
                  [
                     InlineKeyboardButton(text="🎸 Music Setup", callback_data="sinon_cbguide"),                        
@@ -602,7 +602,7 @@ __Terms & Conditions will be changed anytime__""",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Back", callback_data="sinon_back"),
+                        InlineKeyboardButton(text="Back", callback_data="sinon_"),
                     ]
                 ]
             ),
