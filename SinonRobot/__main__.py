@@ -550,7 +550,7 @@ If you want to update them immediately, you can use the /admincache command,thta
 If you are getting a message saying:
 `You must be this chat administrator to perform this action!`
 This has nothing to do with Sinon rights; this is all about your permissions as an admin. Sinon respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Sinon. Similarly, to change Sinon settings, you need to have the Change group info permission.
-The message very clearly says that you need these rights - __not Sinon__""",
+The message very clearly says that you need these rights not Sinon""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="sinon_howto")]]
@@ -601,7 +601,7 @@ __Terms & Conditions will be changed anytime__""",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Back", callback_data="sinon_"),
+                        InlineKeyboardButton(text="Back", callback_data="sinon_howto"),
                     ]
                 ]
             ),
@@ -614,7 +614,7 @@ __Terms & Conditions will be changed anytime__""",
 3. **After promoting me, type /admincache in group to update the admin list.
 4. **Add @SinonAssistant to your group.
 5. **Turn on the video chat first before start to play music.
-📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or you can ask Admins in @idzeroidsupport.**
+📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or you can ask Admins in @SinonSupport.**
 💫 __Powered by Sinon A.I__""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
