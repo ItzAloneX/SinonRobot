@@ -436,7 +436,7 @@ def sinon_about_callback(update, context):
                             text="🔐 Help", callback_data="help_back"
                         )
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]
                 ]
             ),
         )
@@ -542,20 +542,16 @@ def sinon_about_callback(update, context):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="👷🏻‍♂️ Admins Settings", callback_data="aboutmanu_permis"
-                        ),
-                        InlineKeyboardButton(
-                            text="💬 Anti Spam", callback_data="aboutmanu_spamprot"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="🎸 Music Setup", callback_data="aboutmanu_cbguide"
-                        ),
-                    ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
+                 [
+                    InlineKeyboardButton(text="👷🏻‍♂️ Admins Settings", callback_data="aboutmanu_permis"),                        
+                    InlineKeyboardButton(text="💬 Anti Spam", callback_data="aboutmanu_spamprot"),                      
+                 ],
+                 [
+                    InlineKeyboardButton(text="🎸 Music Setup", callback_data="aboutmanu_cbguide"),                        
+                 ],
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
+                 ]
                 ]
             ),
         )
@@ -644,7 +640,7 @@ __Terms & Conditions will be changed anytime__""",
                         InlineKeyboardButton(
                             text="🔻", callback_data="aboutmanu_cbhelps"
                         ),
-                    ],
+                    ]
                 ]
             ),
         )
@@ -671,7 +667,7 @@ __Terms & Conditions will be changed anytime__""",
                         InlineKeyboardButton(
                             text="🔻", callback_data="aboutmanu_cbguide"
                         ),
-                    ],
+                    ]
                 ]
             ),
         )        
