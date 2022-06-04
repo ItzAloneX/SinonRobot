@@ -132,7 +132,15 @@ I have the Advanced Group Managing functions like flood control, a warning syste
 If you have any question about *Sinon*, let us know at @SinonSupport.
 👇 You Can Know More About *Sinon* By Clicking The Below Buttons 👇"""
 
-SINO_BASIC = """ *Here's basic Help regarding How to use Me?* \n\n♡ Firstly Add Sinon to your group by pressing [here](t.me/SinonRobot?startgroup=true) \n\n♡ After adding promote me manually with full rights for faster experience.\n\n♡ Than send `/admincache@SinonRobot` in that chat to refresh admin list in My database.\n\n\n *All done now use below given button's to know about use! * """
+SINO_BASIC = """ *♡ Basic Setup Of Sinon*
+
+1) First add Sinon to your group.
+
+2) After adding promote sinon with full rights for fastest experience.
+
+3) Next send /admincache in that group for refresh admin list in My Database.
+
+*♡ All done, now check below buttons to know about use!* """
 
 SINON_ADMIN = """
 *Let's Make Your Group Bit Effective Now* 
