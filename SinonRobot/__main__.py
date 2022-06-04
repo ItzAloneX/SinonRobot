@@ -425,10 +425,10 @@ def sinon_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="❓ How To Use Me", callback_data="aboutmanu_howto"
+                            text="❓ How To Use Me", callback_data="sinon_howto"
                         ),
                         InlineKeyboardButton(
-                            text="⚠️ T.A.C", callback_data="aboutmanu_tac"
+                            text="⚠️ T.A.C", callback_data="sinon_tac"
                         ),
                     ],
                     [
@@ -436,7 +436,7 @@ def sinon_about_callback(update, context):
                             text="🔐 Help", callback_data="help_back"
                         )
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]
+                    [InlineKeyboardButton(text="Back", callback_data="sinon_back")]
                 ]
             ),
         )
