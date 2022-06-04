@@ -466,10 +466,9 @@ def sinon_about_callback(update, context):
     elif query.data == "sinon_notes":
         query.message.edit_text(
             text="""<b> ♡ Setting Up Notes </b>"
-            
-            ♡ can save message/media/audio or anything as notes
-            ♡ To get a note simply use # at the beginning of a word
-            ♡ You can also set buttons for notes and filters (refer help menu)""",
+♡ can save message/media/audio or anything as notes
+♡ To get a note simply use # at the beginning of a word
+♡ You can also set buttons for notes and filters (refer help menu)""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="sinon_basichelp")]]
@@ -487,7 +486,7 @@ def sinon_about_callback(update, context):
     elif query.data == "sinon_support":
         query.message.edit_text(
             text="""*♡ Sinon Support Chats*          
-                 ♡Join Support Group/Channel""",
+♡Join Support Group/Channel""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -508,7 +507,7 @@ def sinon_about_callback(update, context):
     elif query.data == "sinon_credit":
         query.message.edit_text(
             text="""<b> ♡ Credits Of Sinon </b>            
-                 ♡ Here Some Developers Helping In Making Of Sinon""",
+♡ Here Some Developers Helping In Making Of Sinon""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
