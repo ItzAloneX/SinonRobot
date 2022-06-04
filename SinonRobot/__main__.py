@@ -493,17 +493,17 @@ def sinon_about_callback(update, context):
         )    
     elif query.data == "sinon_support":
         query.message.edit_text(
-            text="""*♡ Sinon Support Chats*          
-♡Join Support Group/Channel""",
+            text="""*♡ Sinon Support Chats*
+♡ Join Support Group/Channel""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Network", url="t.me/YatoNetwork"),
+                    InlineKeyboardButton(text="🚑 Network", url="t.me/YatoNetwork"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/SinonSupport"),
-                    InlineKeyboardButton(text="Updates", url="t.me/SinonUpdates"),
+                    InlineKeyboardButton(text="🗯️ Support", url="t.me/SinonSupport"),
+                    InlineKeyboardButton(text="🔔 Updates", url="t.me/SinonUpdates"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="sinon_basichelp"),
@@ -514,7 +514,7 @@ def sinon_about_callback(update, context):
         )
     elif query.data == "sinon_credit":
         query.message.edit_text(
-            text="""<b> ♡ Credits Of Sinon </b>            
+            text="""<b> ♡ Credits Of Sinon </b>
 ♡ Here Some Developers Helping In Making Of Sinon""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -553,10 +553,13 @@ def sinon_about_callback(update, context):
     elif query.data == "sinon_permis":
         query.message.edit_text(
             text="""<b> ♡ Admin Permissions</b>
+
 To avoid slowing down, Sinon caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Sinon will only find out ~10 minutes later.
 If you want to update them immediately, you can use the /admincache command,thta'll force Sinon to check who the admins are again and their permissions
 If you are getting a message saying:
-`You must be this chat administrator to perform this action!`
+
+You must be this chat administrator to perform this action!
+
 This has nothing to do with Sinon rights; this is all about your permissions as an admin. Sinon respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Sinon. Similarly, to change Sinon settings, you need to have the Change group info permission.
 The message very clearly says that you need these rights not Sinon""",
             parse_mode=ParseMode.HTML,
@@ -567,26 +570,34 @@ The message very clearly says that you need these rights not Sinon""",
     elif query.data == "sinon_spamprot":
         query.message.edit_text(
             text="""*♡  Anti-Spam Settings*
+
 /antispam <on/off/yes/no>: Change antispam security settings in the group, or return your current settings(when no arguments).
 _This helps protect you and your groups by removing spam flooders as quickly as possible._
+
 ♡ /setflood <int/'no'/'off'>: enables or disables flood control
 ♡ /setfloodmode <ban/kick/mute/tban/tmute> <value>: Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
+
 _Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood will result in restricting that user._
 ♡ /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different lines will allow you to add multiple triggers.
 ♡ /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>: Action to perform when someone sends blacklisted words.
+
 _Blacklists are used to stop certain triggers from being said in a group. Any time the trigger is mentioned, the message will immediately be deleted. A good combo is sometimes to pair this up with warn filters!_
-♡ /reports <on/off>: Change report setting, or view current status.
+ ♡ /reports <on/off>: Change report setting, or view current status.
  ♡ If done in pm, toggles your status.
  ♡ If in chat, toggles that chat's status.
+
 _If someone in your group thinks someone needs reporting, they now have an easy way to call all admins._
 ♡ /lock <type>: Lock items of a certain type (not available in private)
 ♡ /locktypes: Lists all possible locktypes
+
 _The locks module allows you to lock away some common items in the telegram world; the bot will automatically delete them!_
 ♡ /addwarn <keyword> <reply message>: Sets a warning filter on a certain keyword. If you want your keyword to be a sentence, encompass it with quotes, as such: /addwarn "very angry" This is an angry user. 
 ♡ /warn <userhandle>: Warns a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
 ♡ /strongwarn <on/yes/off/no>: If set to on, exceeding the warn limit will result in a ban. Else, will just kick.
+
 _If you're looking for a way to automatically warn users when they say certain things, use the /addwarn command._
 ♡ /welcomemute <off/soft/strong>: All users that join, get muted
+
 _ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
