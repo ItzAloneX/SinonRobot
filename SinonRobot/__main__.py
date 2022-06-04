@@ -486,8 +486,8 @@ def sinon_about_callback(update, context):
         )    
     elif query.data == "sinon_support":
         query.message.edit_text(
-            text="*♡ Sinon Support Chats*"            
-                 "\n\n♡Join Support Group/Channel",
+            text="""*♡ Sinon Support Chats*          
+                 ♡Join Support Group/Channel""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -507,8 +507,8 @@ def sinon_about_callback(update, context):
         )
     elif query.data == "sinon_credit":
         query.message.edit_text(
-            text="<b> ♡ Credits Of Sinon </b>"            
-                 "\n\n♡ Here Some Developers Helping In Making Of Sinon",
+            text="""<b> ♡ Credits Of Sinon </b>            
+                 ♡ Here Some Developers Helping In Making Of Sinon""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
