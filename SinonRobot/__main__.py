@@ -522,20 +522,8 @@ def sinon_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "aboutmanu_back":
-        query.message.edit_text(
-            PM_START_TEXT.format(
-                escape_markdown(context.bot.first_name),
-                escape_markdown(get_readable_time((time.time() - StartTime))),
-                sql.num_users(),
-                sql.num_chats(),
-            ),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-        )
 
-    elif query.data == "aboutmanu_howto":
+    elif query.data == "sinon_howto":
         query.message.edit_text(
             text=HOWTOUSE,
             parse_mode=ParseMode.MARKDOWN,
@@ -543,19 +531,19 @@ def sinon_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="👷🏻‍♂️ Admins Settings", callback_data="aboutmanu_permis"),                        
+                    InlineKeyboardButton(text="👷🏻‍♂️ Admins Settings", callback_data="sinon_permis"),                        
                     InlineKeyboardButton(text="💬 Anti Spam", callback_data="aboutmanu_spamprot"),                      
                  ],
                  [
-                    InlineKeyboardButton(text="🎸 Music Setup", callback_data="aboutmanu_cbguide"),                        
+                    InlineKeyboardButton(text="🎸 Music Setup", callback_data="sinon_cbguide"),                        
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
+                    InlineKeyboardButton(text="Back", callback_data="sinon_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "aboutmanu_permis":
+    elif query.data == "sinon_permis":
         query.message.edit_text(
             text="""<b> ♡ Admin Permissions</b>
 To avoid slowing down, Sinon caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Sinon will only find out ~10 minutes later.
@@ -566,10 +554,10 @@ This has nothing to do with Sinon rights; this is all about your permissions as 
 The message very clearly says that you need these rights - __not Sinon__""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Back", callback_data="sinon_howto")]]
             ),
         )
-    elif query.data == "aboutmanu_spamprot":
+    elif query.data == "sinon_spamprot":
         query.message.edit_text(
             text="""*♡  Anti-Spam Settings*
 /antispam <on/off/yes/no>: Change antispam security settings in the group, or return your current settings(when no arguments).
@@ -595,10 +583,10 @@ _If you're looking for a way to automatically warn users when they say certain t
 _ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Back", callback_data="sinon_howto")]]
             ),
         )
-    elif query.data == "aboutmanu_tac":
+    elif query.data == "sinon_tac":
         query.message.edit_text(
             text="""<b> ♡ Terms and Conditions </b>
 __To Use This Bot, You Need To Read Terms and Conditions Carefully.__
@@ -614,12 +602,12 @@ __Terms & Conditions will be changed anytime__""",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
+                        InlineKeyboardButton(text="Back", callback_data="sinon_back"),
                     ]
                 ]
             ),
         )
-    elif query.data == "aboutmanu_cbguide":
+    elif query.data == "sinon_cbguide":
         query.message.edit_text(
             text="""*♡ How To Setup Music*
 1. **First, add me to your group.
@@ -634,17 +622,17 @@ __Terms & Conditions will be changed anytime__""",
                 [
                     [
                         InlineKeyboardButton(
-                            text="🔺", callback_data="aboutmanu_cbhelps"
+                            text="🔺", callback_data="sinon_cbhelps"
                         ),
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto"),
+                        InlineKeyboardButton(text="Back", callback_data="sinon_howto"),
                         InlineKeyboardButton(
-                            text="🔻", callback_data="aboutmanu_cbhelps"
+                            text="🔻", callback_data="sinon_cbhelps"
                         ),
                     ]
                 ]
             ),
         )
-    elif query.data == "aboutmanu_cbhelps":
+    elif query.data == "sinon_cbhelps":
         query.message.edit_text(
             text="""* ♡ Music Commands *
 1. **/play (name song) for playing music.
@@ -661,11 +649,11 @@ __Terms & Conditions will be changed anytime__""",
                 [
                     [
                         InlineKeyboardButton(
-                            text="🔺", callback_data="aboutmanu_cbguide"
+                            text="🔺", callback_data="sinon_cbguide"
                         ),
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto"),
+                        InlineKeyboardButton(text="Back", callback_data="sinon_howto"),
                         InlineKeyboardButton(
-                            text="🔻", callback_data="aboutmanu_cbguide"
+                            text="🔻", callback_data="sinon_cbguide"
                         ),
                     ]
                 ]
@@ -995,7 +983,7 @@ def main():
         settings_button, pattern=r"stngs_", run_async=True
     )
 
-    about_callback_handler = CallbackQueryHandler(
+    sinon_callback_handler = CallbackQueryHandler(
         sinon_about_callback, pattern=r"sinon_", run_async=True
     )
 
@@ -1014,6 +1002,7 @@ def main():
     dispatcher.add_handler(about_callback_handler)
     dispatcher.add_handler(source_callback_handler)
     dispatcher.add_handler(settings_handler)
+    dispatcher.add_handler(sinon_callback_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
