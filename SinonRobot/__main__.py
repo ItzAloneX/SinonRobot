@@ -372,45 +372,48 @@ def help_button(update, context):
             module = mod_match.group(1)
             text = (
                 "Here is the help for the *{}* module:\n".format(
-                    HELPABLE[module].__mod_name__
+                    SINON_BASIC[module].mod_name
                 )
-                + HELPABLE[module].__help__
+                + SINON_BASIC[module].sinon_basic
             )
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                  [
+                    
+                    [InlineKeyboardButton(text="Back", callback_data="help_back"), InlineKeyboardButton(text="🗯️ Support", url="t.me/SinonSupport")]
+                  ]
                 ),
             )
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
             query.message.edit_text(
-                text=HELP_STRINGS,
+                text=SINON_BASICC,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(curr_page - 1, HELPABLE, "help")
+                    paginate_modules(curr_page - 1, SINON_BASIC, "sinonbasic")
                 ),
             )
 
         elif next_match:
             next_page = int(next_match.group(1))
             query.message.edit_text(
-                text=HELP_STRINGS,
+                text=SINON_BASICC,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(next_page + 1, HELPABLE, "help")
+                    paginate_modules(next_page + 1, SINON_BASIC, "sinonbasic")
                 ),
             )
 
         elif back_match:
             query.message.edit_text(
-                text=HELP_STRINGS,
+                text=SINON_BASICC,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, HELPABLE, "help")
+                    paginate_modules(0, SINON_BASIC, "sinonbasic")
                 ),
             )
 
