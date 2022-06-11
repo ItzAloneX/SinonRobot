@@ -17,7 +17,7 @@ from requests import get
 from telethon.tl.types import InputMessagesFilterPhotos
 from telethon import events, Button, custom, version
 
-from SinonRobot import OWNER_ID, UPDATES_CHANNEL
+from SinonRobot import OWNER_ID
 from SinonRobot.events import register
 from SinonRobot import telethn as tbot
 from PIL import Image, ImageDraw, ImageFont
